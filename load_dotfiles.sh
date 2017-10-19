@@ -9,3 +9,7 @@ stow bash
 # Stow tmux
 echo "tmux..."
 stow tmux
+
+# Stow git
+echo "git..."
+stow git
