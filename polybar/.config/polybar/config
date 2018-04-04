@@ -373,7 +373,7 @@ ramp-foreground = ${colors.foreground-alt}
 [module/get-openvpn-status]
 type = custom/script
 exec = ~/.config/polybar/scripts/get-openvpn-status.sh
-interval = 5
+interval = 1
 
 format-prefix = " VPN: "
 format-prefix-foreground = ${colors.foreground-alt}
