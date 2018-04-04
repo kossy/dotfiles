@@ -13,3 +13,7 @@ stow tmux
 # Stow git
 echo "git..."
 stow git
+
+# Stow i3
+echo "i3..."
+stow i3
