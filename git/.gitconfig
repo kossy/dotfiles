@@ -1,13 +1,11 @@
-***REMOVED***
-	***REMOVED***
-	***REMOVED***
-	***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
+[include]
+  path = ~/.gitconfig.local
+[color]
+	ui = auto
+[alias]
+	pushall = !git remote | xargs -L1 git push --all
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
