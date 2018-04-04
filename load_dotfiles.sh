@@ -17,3 +17,9 @@ stow git
 # Stow i3
 echo "i3..."
 stow i3
+
+# Stow polybar
+echo "polybar..."
+stow polybar
+
+echo "DONE"
