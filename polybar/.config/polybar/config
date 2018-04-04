@@ -47,9 +47,8 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = "Wuncon Siji:pixelsize=10;1"
 
 modules-left = i3
-modules-center = 
-modules-right = filesystem alsa memory cpu wlan eth battery temperature date powermenu
-
+modules-center =
+modules-right = filesystem alsa memory cpu wlan eth get-openvpn-status battery temperature date powermenu
 tray-position = right
 tray-padding = 2
 ;tray-transparent = true
@@ -371,6 +370,15 @@ ramp-1 = 
 ramp-2 = 
 ramp-foreground = ${colors.foreground-alt}
 
+[module/get-openvpn-status]
+type = custom/script
+exec = ~/.config/polybar/scripts/get-openvpn-status.sh
+interval = 5
+
+format-prefix = " VPN: "
+format-prefix-foreground = ${colors.foreground-alt}
+label = %output%
+
 [module/powermenu]
 type = custom/menu
 
@@ -378,7 +386,7 @@ expand-right = true
 
 format-spacing = 1
 
-label-open =  
+label-open = 
 label-open-foreground = ${colors.alert}
 label-close =  cancel
 label-close-foreground = ${colors.alert}
