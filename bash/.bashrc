@@ -10,3 +10,6 @@ alias plist="yaourt -Qm"
 alias p="mpv --ontop --no-border --on-all-workspaces --autofit=384x216 --geometry=99%:2%"
 alias vpnr="sudo systemctl restart openvpn-client@Mikasa"
 export VISUAL="nano"
+
+# added by travis gem
+[ -f /home/kossy/.travis/travis.sh ] && source /home/kossy/.travis/travis.sh
