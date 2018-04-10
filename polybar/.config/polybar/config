@@ -353,7 +353,7 @@ animation-charging-framerate = 750
 [module/temperature]
 type = internal/temperature
 thermal-zone = 1
-warn-temperature = 60
+warn-temperature = 80
 
 hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
 
@@ -365,9 +365,9 @@ label = %temperature-c%
 label-warn = %temperature-c%
 label-warn-foreground = ${colors.alert}
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
+ramp-0 = %{F#a6e22e}%{F-}
+ramp-1 = %{F#f39c12}%{F-}
+ramp-2 = %{F#e74c3c}%{F-}
 ramp-foreground = ${colors.foreground-alt}
 
 [module/get-openvpn-status]
