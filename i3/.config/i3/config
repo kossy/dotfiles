@@ -139,6 +139,14 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# Screen brightness controls
+# bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+# bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+
+# Screen brightness controls using light package
+bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
+bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
+
 # Colours
 #
 # class                 border  backgr. text    indicator child_border

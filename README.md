@@ -10,6 +10,9 @@ Once stow is installed run `./load_dotfiles.sh` to load all the dotfiles in.
 
 If not all dotfiles are required, then `stow [name]` can be used to load in a particular set of configs. e.g `stow git`
 
+### i3
+Config uses `light` or `light-git` arch package to control screen brightness.
+
 
 ## Git
 All personal information should be stored in ` ~/.gitconfig.local` and not in
