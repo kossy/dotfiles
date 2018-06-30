@@ -1,5 +1,28 @@
-# kossy dotfiles
-My dotfiles. Including configs for i3, polybar, rofi, tmux, git, bash. Managed using GNU stow.
+```
+  _                             _       _    __ _ _           
+ | |                           | |     | |  / _(_) |          
+ | | _____  ___ ___ _   _    __| | ___ | |_| |_ _| | ___  ___ 
+ | |/ / _ \/ __/ __| | | |  / _` |/ _ \| __|  _| | |/ _ \/ __|
+ |   < (_) \__ \__ \ |_| | | (_| | (_) | |_| | | | |  __/\__ \
+ |_|\_\___/|___/___/\__, |  \__,_|\___/ \__|_| |_|_|\___||___/
+                     __/ |                                    
+                    |___/
+```
+
+![Screenshot of setup](https://i.imgur.com/Dmt04fA.png)
+
+My dotfiles.
+
+Using:
++ i3
++ Polybar
++ rofi
++ tmux
++ git
++ gtk
++ bash
++ zsh 
++ pywal
 
 ## Installing
 Clone repository into home directory `~/`
@@ -14,7 +37,7 @@ If not all dotfiles are required, then `stow [name]` can be used to load in a pa
 Config uses `light` or `light-git` arch package to control screen brightness.
 
 
-## Git
+### Git
 All personal information should be stored in ` ~/.gitconfig.local` and not in
 `.gitconfig`.
 
