@@ -18,6 +18,7 @@ bindsym $mod+Shift+q kill
 
 # start rofi (a program launcher)
 bindsym $mod+d exec rofi -show combi -show-icons -display-combi ""
+
 # start teiler
 #bindsym $mod+c exec teiler
 
@@ -28,6 +29,9 @@ bindsym $mod+k focus up
 bindsym $mod+l focus right
 
 bindsym $mod+c exec --no-startup-id flash_window
+
+# Random Theme Switching 
+bindsym $mod+t exec --no-startup-id ./.config/i3/theme-switch.sh
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
