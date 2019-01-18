@@ -106,6 +106,12 @@ bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
+
+# switch workspace prev/next
+bindsym $mod+z workspace prev
+bindsym $mod+x workspace next
+
+
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
@@ -129,6 +135,9 @@ bindsym $mod+Escape exec "i3lock; sudo systemctl hibernate"
 
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+bindsym $mod+q exec "flameshot gui"
+
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -166,7 +175,10 @@ bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
 
 # Audio buttons
-bindsym XF86Launch1 exec pavucontrol
+bindsym Menu exec pavucontrol
+
+# Arandr
+bindsym XF86Search exec arandr
 
 # Colours
 #
@@ -232,3 +244,12 @@ gaps outer 0
 
 smart_gaps on
 
+# Set x11 keymap
+exec --no-startup-id setxkbmap gb
+
+# Set HiDPI scaling for qt
+exec export QT_DEVICE_PIXEL_RATIO=2
+
+exec --no-startup-id nm-applet
+
+exec --no-startup-id kdeconnect-indicator
