@@ -10,7 +10,7 @@ try:
         data = json.loads(url.read().decode())
         
         # Print Desired Output String
-        print('%%{F#e74c3c} %%{F-}%2.2f%% (%d)'% (data['ads_percentage_today'], data['ads_blocked_today']))
+        print('%%{F#e74c3c} %%{F-}%2.2f%% (%d)'% (data['ads_percentage_today'], data['ads_blocked_today']))
 
 except URLError:
     # If there is no connection to the API, show nothing.
