@@ -22,4 +22,12 @@ stow i3
 echo "polybar..."
 stow polybar
 
+# Stow gtk 
+echo "gtk..."
+stow gtk
+
+# Stow wal
+echo "wal..."
+stow wal
+
 echo "DONE"
