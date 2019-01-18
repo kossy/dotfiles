@@ -23,3 +23,5 @@ case $NUMBER in
           ;;
 
 esac
+
+wal-steam -w
