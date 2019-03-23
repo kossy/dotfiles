@@ -30,4 +30,12 @@ stow gtk
 echo "wal..."
 stow wal
 
+# Stow rofi
+echo "rofi..."
+stow rofi
+
+# Stow compton
+echo "compton..."
+stow compton
+
 echo "DONE"

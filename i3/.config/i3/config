@@ -230,7 +230,7 @@ exec --no-startup-id i3-msg "workspace 2; exec chromium"
 exec wal -R
 
 # Compton
-exec compton --config  ~/.config/compton.conf
+exec compton --config  ~/.config/compton/compton.conf
 
 # Restore Desktop Background
 exec --no-startup-id nitrogen --restore
