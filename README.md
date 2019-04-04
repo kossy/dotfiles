@@ -9,7 +9,7 @@
                     |___/
 ```
 
-![Screenshot of setup](https://i.imgur.com/Dmt04fA.png)
+![Screenshot of setup](https://i.imgur.com/cPQOCDH.png)
 
 My dotfiles.
 
