@@ -2,7 +2,7 @@
 # Script for polybar, shows openvpn-client status.
 
 # Get status of openvpn-client@Mikasa service.
-VPN_SERVICE_STATUS=`systemctl status openvpn-client@Petra | grep Active: | awk '{ print $2 }'`
+VPN_SERVICE_STATUS=`systemctl status openvpn-client@kossybox | grep Active: | awk '{ print $2 }'`
 
 # Get status of network by pinging cloudflare dns.
 PING_EXIT_STATUS=`ping -c 1 -q -W 1 1.1.1.1 > /dev/null 2>&1 ; echo $?`
@@ -18,20 +18,22 @@ if [[ $VPN_SERVICE_STATUS = 'active' ]]; then
 
   if [[ $PING_EXIT_STATUS = '2' ]]; then
     # No network connection, exit status 2 from ping.
-    echo %{F$red}''%{F-}
+
+    echo %{A1:vpnstart:}%{F$red}''%{F-}%{A}
+
 
   elif [[ $PING_EXIT_STATUS = '0' ]]; then
-    # Network connected, exit status 0 from ping.
-    echo %{F$green}''%{F-}
+    # Network connected, exit status 0 from ping
+    echo %{A1:code:}%{F$green}''%{F-}%{A}
   fi
 
 elif [[ $VPN_SERVICE_STATUS = 'inactive' ]]; then
   # openvpn-client service is inactive, probably due to it being stopped.
-  echo %{F$red}''%{F-}
+  echo  %{A1:vpnstart:}%{F$red}''%{F-}%{A}
 
 elif [[ $VPN_SERVICE_STATUS = 'failed' ]]; then
   # openvpn-client failed due to error. More than likely a config error.
-  echo %{F$red}''%{F-}
+  echo  %{A1:vpnstart:}%{F$red}''%{F-}%{A}
 
 else
   # Catch all, just print openvpn-client vpn connection status.

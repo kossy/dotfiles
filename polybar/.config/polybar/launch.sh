@@ -11,4 +11,4 @@ sleep 1; done
 polybar main &
 polybar bottom &
 
-echo "Bar launched..."
+exec notify-send "Polybar" "Restarted"

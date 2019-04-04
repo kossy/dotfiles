@@ -15,7 +15,7 @@ alert = ${xrdb:color3:#fff}
 transparent = ${xrdb:transparent:#222}
 
 [bar/main]
-monitor = ${env:MONITOR:eDP-1}
+monitor = ${env:MONITOR:eDP-1-1}
 width = 100%
 height = 40
 dpi = 196
@@ -45,7 +45,7 @@ cursor-click = pointer
 cursor-scroll = ns-resize
 
 [bar/bottom]
-monitor = ${env:MONITOR:eDP-1}
+monitor = ${env:MONITOR:eDP-1-1}
 width = 100%
 height = 40
 dpi = 196
@@ -82,8 +82,8 @@ font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=8;2"
 font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=8;2"
 font-3 = "Font Awesome 5 Brands:style=Regular:pixelsize=8;2"
 modules-left =
-modules-center =
-modules-right = filesystem alsa memory cpu pihole-ads-blocked openvpn-status-minimal wlan eth temperature 
+modules-center = kde-connect-status openvpn-status-minimal
+modules-right = filesystem alsa memory cpu wlan eth temperature 
 
 [module/xwindow]
 type = internal/xwindow
@@ -208,14 +208,14 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " CPU:"
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 label = %percentage:2%%
 
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " RAM: "
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 label = %gb_used%
 
@@ -388,7 +388,7 @@ label = %output%
 type = custom/script
 exec = ~/.config/polybar/scripts/openvpn-status-minimal.sh
 interval = 1
-
+tail = true
 label = %output%
 
 

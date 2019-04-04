@@ -2,7 +2,7 @@
 # Script for polybar, shows openvpn-client status.
 
 # Get status of openvpn-client@Mikasa service.
-VPN_SERVICE_STATUS=`systemctl status openvpn-client@Petra | grep Active: | awk '{ print $2 }'`
+VPN_SERVICE_STATUS=`systemctl status openvpn-client@kossybox | grep Active: | awk '{ print $2 }'`
 
 # Get status of network by pinging cloudflare dns.
 PING_EXIT_STATUS=`ping -c 1 -q -W 1 1.1.1.1 > /dev/null 2>&1 ; echo $?`
