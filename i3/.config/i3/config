@@ -139,6 +139,43 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 bindsym $mod+q exec "flameshot gui"
 
 
+mode "vpn" {
+
+       
+        set $vpn_name kossybox
+
+
+        bindsym r exec --no-startup-id gksu systemctl restart openvpn-client@$vpn_name; exec notify-send "VPN" "Restarted $vpn_name"
+        bindsym s exec --no-startup-id gksu systemctl stop openvpn-client@$vpn_name; exec notify-send "VPN" "Stopped $vpn_name"
+
+
+        # back to normal: Enter or Escape or $mod+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+v mode "default"
+}
+bindsym $mod+v mode "vpn"
+
+
+mode "config" {
+
+        # Restart Polybar, reloading config
+        bindsym p exec ~/.config/polybar/launch.sh     
+
+	# Restart Dunst
+        bindsym d exec ~/.config/dunst/restart.sh
+	
+	# Restart Compton
+	bindsym c exec ~/.config/compton/launch.sh
+
+        # back to normal: Enter or Escape or $mod+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+c mode "default"      
+}
+bindsym $mod+c mode "config"
+
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
