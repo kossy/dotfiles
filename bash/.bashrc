@@ -1,15 +1,16 @@
 # Add vitrualenvwrapper.
 export WORKON_HOME=~/.virtualenvs
 source /usr/bin/virtualenvwrapper.sh
+source /usr/share/bash-completion/bash_completion
 
-# Set ls to used coloured output via alias.
-alias ls="ls --color=auto"
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
 
-# Yaourt installed package list.
-alias plist="yaourt -Qm"
-alias p="mpv --ontop --no-border --on-all-workspaces --autofit=384x216 --geometry=99%:2%"
-alias vpnr="sudo systemctl restart openvpn-client@Mikasa"
 export VISUAL="nano"
 
 # added by travis gem
 [ -f /home/kossy/.travis/travis.sh ] && source /home/kossy/.travis/travis.sh
+
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
