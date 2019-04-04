@@ -5,8 +5,8 @@
 set $mod Mod1
 
 # Use Adobe's Source Code Pro
-font pango:Source Code Pro 10
-
+#font pango:Source Code Pro 10
+font pango:Source Code Pro Semibold 10
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -28,10 +28,8 @@ bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
 
-bindsym $mod+c exec --no-startup-id flash_window
-
 # Random Theme Switching 
-bindsym $mod+t exec --no-startup-id ./.config/i3/theme-switch.sh
+bindsym $mod+t exec --no-startup-id ~/.config/i3/theme-switch.sh
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -200,7 +198,6 @@ mode "resize" {
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
 }
-
 bindsym $mod+r mode "resize"
 
 # Screen brightness controls
@@ -269,6 +266,9 @@ exec wal -R
 # Compton
 exec compton --config  ~/.config/compton/compton.conf
 
+# Start dunst
+exec dunst -config ~/.config/dunst/dunstrc &
+
 # Restore Desktop Background
 exec --no-startup-id nitrogen --restore
 
@@ -285,8 +285,12 @@ smart_gaps on
 exec --no-startup-id setxkbmap gb
 
 # Set HiDPI scaling for qt
-exec export QT_DEVICE_PIXEL_RATIO=2
+#exec export QT_DEVICE_PIXEL_RATIO=2
+exec export QT_AUTO_SCREEN_SCALE_FACTOR=2
+exec export GDK_SCALE=2
+exec export GDK_DPI_SCALE=0.5
 
 exec --no-startup-id nm-applet
 
 exec --no-startup-id kdeconnect-indicator
+
